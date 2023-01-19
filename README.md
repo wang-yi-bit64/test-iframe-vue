@@ -1,18 +1,7 @@
-# Vue 3 + TypeScript + Vite
+# ifram 调用 print 回调 onafterprint 没有生效
+read html guide where for print it explains when before and after are ignored if there is a sandbox present. frames are usually considered a sandbox to separate domains see [https://www.w3schools.com/TAGS/att_sandbox.asp](https://www.w3schools.com/TAGS/att_sandbox.asp) [https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-print](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-print).If the printing dialog is blocked by a Document's sandbox, then neither the beforeprint nor afterprint events will be fired
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 参考 [stackoverflow.com] 的回答
+[具体连接](https://stackoverflow.com/questions/75156033/the-iframe-print-event-onafterprint-event-is-not-triggered-in-the-react-and-vue) 因为框架属于sandbox, 	sandbox 阻碍得 afterprint 和beforeprint 的事件回调
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 解决方法 待定
