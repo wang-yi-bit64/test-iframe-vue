@@ -4,4 +4,8 @@ read html guide where for print it explains when before and after are ignored if
 ## 参考 [stackoverflow.com] 的回答
 [具体连接](https://stackoverflow.com/questions/75156033/the-iframe-print-event-onafterprint-event-is-not-triggered-in-the-react-and-vue) 因为框架属于sandbox, 	sandbox 阻碍得 afterprint 和beforeprint 的事件回调
 
+## 参考 [https://github.com/]
+[issues](https://github.com/whatwg/html/issues/5096)
+
+
 ## 解决方法 待定
